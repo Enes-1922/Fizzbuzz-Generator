@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FizzBuzz Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__text">
+      <h1>FizzBuzz Generator</h1>
+    </div>
+
+    <div class="stats" aria-label="Counters">
+      <div class="stat">
+        <div class="stat__label">Total</div>
+        <div class="stat__value" id="sTotal">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Fizz</div>
+        <div class="stat__value" id="sFizz">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Buzz</div>
+        <div class="stat__value" id="sBuzz">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">FizzBuzz</div>
+        <div class="stat__value" id="sBoth">0</div>
+      </div>
+      <div class="stat">
+        <div class="stat__label">Number</div>
+        <div class="stat__value" id="sNone">0</div>
+      </div>
+    </div>
+  </header>
+
+  <section class="panel" aria-label="Controls">
+    <div class="panel__grid">
+      <label class="field">
+        <span>Starting Value</span>
+        <input id="startValue" type="number" value="1" step="1" />
+      </label>
+
+      <label class="field">
+        <span>Ending Value</span>
+        <input id="endValue" type="number" value="100" step="1" />
+      </label>
+
+      <label class="field">
+        <span>Fizz Value</span>
+        <input id="fizzValue" type="number" value="3" min="1" step="1" />
+      </label>
+
+      <label class="field">
+        <span>Buzz Value</span>
+        <input id="buzzValue" type="number" value="5" min="1" step="1" />
+      </label>
+
+      <label class="field">
+        <span>Tile Size (px)</span>
+        <input id="tileSize" type="range" min="60" max="140" value="96" />
+      </label>
+
+      <div class="actions">
+        <button id="defaultBtn" type="button">Generate Default</button>
+        <button id="generateBtn" type="button">Generate</button>
+        <button id="clearBtn" type="button" class="secondary">Clear</button>
+      </div>
+
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </div>
+
+    <div class="legend" aria-label="Legend">
+      <div class="pill both">FizzBuzz</div>
+      <div class="pill fizz">Fizz</div>
+      <div class="pill buzz">Buzz</div>
+      <div class="pill none">Number</div>
+    </div>
+  </section>
+
+  <main id="grid" class="grid" aria-label="FizzBuzz Grid"></main>
+
+  <footer class="foot">
+    <small>Made by Enes Uçar</small>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
